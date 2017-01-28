@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+<head>
+   <meta charset="ISO-8859-1">
+    <title>Registration page</title>
+</head>
+<style>
+    input[type=text] {
+        width: 30%;
+        box-sizing: content-box;
+        border: 2px solid #ccc;
+        border-radius: 3px;
+        font-size: 16px;
+        background-color: white;
+        background-position: 8px 8px;
+        background-repeat: no-repeat;
+        padding: 10px 15px 10px 20px;
+        margin-left: 20px;
+        opacity: 0.7;
+    }
+    body {
+        background-image: url('images/download%20(1).jpeg');
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    .forheading {
+        font-family: cursive;
+        font-size: 30px;
+        margin-left: 10%;
+        color: red;
+        opacity: 0.5;
+    }
+    .btn {
+        background: #000000;
+        background-image: -webkit-linear-gradient(top, #000000, #01080d);
+        background-image: -moz-linear-gradient(top, #000000, #01080d);
+        background-image: -ms-linear-gradient(top, #000000, #01080d);
+        background-image: -o-linear-gradient(top, #000000, #01080d);
+        background-image: linear-gradient(to bottom, #000000, #01080d);
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0px;
+        font-family: Courier New;
+        color: #ffffff;
+        font-size: 20px;
+        padding: 10px 20px 10px 20px;
+        text-decoration: none;
+        margin-left: 10%;
+    }
+    .btn:hover {
+        background: #3cb0fd;
+        background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+        background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+        background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+        background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+        background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+        text-decoration: none;
+    }
+</style>
+
+<body>
+<div ng-app=" ">
+ 
+    <h1 class="forheading">REGISTRATION</h1>
+
+    <p>firstname:<input type="text"  placeholder="ENTER FIRST NAME" ng-model="firstname">
+    <p>{{firstname}}</p>
+    <BR>
+    <BR>
+    <input type="text" placeholder="ENTER LAST NAME" ng-model="lastname">
+    <BR>
+    <BR>
+    <input type="text" placeholder="ENTER E-MAIL" >
+    <BR>
+    <BR>
+    <input type="text" placeholder="ENTER PASSWORD">
+    <BR>
+    <BR>
+    <input type="text" placeholder="CONFIRM PASSWORD">
+    <BR>
+    <BR>
+    <button class="btn">REGISTER</button>
+        </BR>  </div>
+</body>
+
+</html>

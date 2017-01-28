@@ -1,0 +1,91 @@
+<html>
+<head>
+    <script src="grade.js"></script>
+    </head>
+    <style>
+        body{
+            background-color:pink;
+        }
+        .gradecalculationbox
+        {
+            margin-top: 200px;
+    margin-left: 200px;
+    padding: 10px;
+    margin-right: 200px;
+    max-width: 900px;
+    height: 200px;
+    border: 2px solid grey;
+    background-color: antiquewhite;
+        }
+         input[type=number] {
+        
+    width:110px;
+    box-sizing:content-box;
+    border: 2px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+    background-color: white;
+    padding: 12px 20px 12px 40px;
+         margin-left:20px;
+             margin-top: 20px;
+            
+       }
+        .forbutton{
+     
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 20px;
+  font-family: Arial;
+  color: #e60760;
+  font-size: 15px;
+  background: #0f0101;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+         margin-top:20px;
+            margin-left: 25px;
+}
+ .foroutput{
+             align-content: center;
+    margin-left: 200px;
+    padding: 10px;
+            margin-right: 200px;
+    max-width: 900px;
+    height: 50px;
+    border: 2px solid grey;
+            background-color: antiquewhite;
+            }
+        
+       
+        h1
+        {
+            font-size: 20px;
+            font-family: cursive;
+            margin-top: 10px;
+            margin-left: 31px;
+        }
+        h2
+        {
+            font-size: 15px;
+            margin-left:10px;
+            margin-bottom:8px;
+        }
+        p
+        {
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+    
+    
+    </style>
+    <body>
+        <div class="gradecalculationbox" align="center">
+            <h1 align="center">ENTER THE GRADE</h1>
+            <input type="number"  placeholder="Grade(1-100)" maxlength="3" id="getGrade"><br> <br>
+            <button class="forbutton" onclick="gradecalculator();" ><b>Get Grade </b></button>
+        </div><br>
+        <div class="foroutput">
+            <p id="output"> </p>
+        </div>
+        
+    </body>
+</html>

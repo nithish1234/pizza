@@ -1,0 +1,84 @@
+<html>
+<head>
+    <script src="intrestcal.js"></script>
+    </head>
+    <style>
+        body{
+            background-color:pink;
+        }
+        .intrestcalculationbox
+        {
+            margin-top: 100px;
+    margin-left: 200px;
+    padding: 10px;
+    margin-right: 200px;
+    max-width: 900px;
+    height: 290px;
+    border: 2px solid grey;
+    background-color: antiquewhite;
+        }
+         h1
+        {
+            font-size: 20px;
+            font-family: cursive;
+            margin-top: 10px;
+            margin-left: 31px;
+        }
+         input[type=number] {
+        
+    width: 95px;
+    box-sizing:content-box;
+    border: 2px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+    background-color: white;
+    padding: 12px 20px 12px 40px;
+         margin-left:20px;
+             margin-top: 10px;
+            
+       }
+        .forbutton{
+     
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 20px;
+  font-family: Arial;
+  color: #e60760;
+  font-size: 15px;
+  background: #0f0101;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+         margin-top:20px;
+            margin-left: 25px;
+}
+        .foroutput{
+             align-content: center;
+    margin-left: 200px;
+    padding: 10px;
+            margin-right: 200px;
+    max-width: 900px;
+    height: 100px;
+    border: 2px solid grey;
+            background-color: antiquewhite;
+            }
+         p
+        {
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+   
+
+    </style>
+    <body>
+        <div class="intrestcalculationbox" align="center"><h1>Calculate intrest</h1>
+         <input type="number" placeholder="Principle"  id="principle"><br>
+            <input type="number" placeholder="Rate" id="rate" maxlength="2"><br>
+            <input type="number" placeholder="years" id="years"  maxlength="2"><br>
+            <button class="forbutton" onclick="intrest();"><b>Calculate Intrest</b></button>
+        </div><br>
+        <center> <div class="foroutput">
+            <p id="output"> </p>
+             <p id="outputtwo"> </p>
+            </div>  </center>    
+    </body>
+</html>

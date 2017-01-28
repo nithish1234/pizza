@@ -1,0 +1,4 @@
+function radiofinction()
+{
+    alert("kkkkkkkkkkkkkk");
+    }

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Book a cab in India| Hire a City Taxi at lowest fares| India's largest cab network | olacabs.com</title>
+        <link rel="stylesheet" href="/static/dev_api/dist/assets/css/global.css"/>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    
+    </head>
+    <body>
+        <header class="mobile-form-header clearfix">
+            <div class="mobile-header-container">
+                <img class="pull-left" src="/static/dev_api/dist/assets/img/ola-logo-small_2x.png" width="83" height="28" alt="Ola Logo">
+                <!-- div class="pull-right" style="margin-top:7px"><span class="text-muted">24x7 Call us</span> (022) 33553355</div -->
+    
+            </div>
+        </header>
+        <style type="text/css">
+.auth-service form .info{
+    display: none;
+}
+.auth-service form.ng-dirty .info{
+    display: block;
+}
+</style>
+        <div class="container-mobile auth-service" ng-app="OlaApp">
+            <div class="mobile-form" ng-controller="LoginCtrl_mobile_email">
+                <h4 class="text-center mt0 mb20">To book a cab, login to Ola account</h4>
+                <div>
+                    <input type="hidden" id="formInfo" value='{"isV2":false,"corpMail":"","info":"","loginVia":"","username":"","appLoginCsrf":"86e73624a5e00d7bc5544b593187d442"}' />
+                </div>
+                <form novalidate name="partner.form" role="form" method="post" action="/api/submitLogin" ng-submit="submit($event, partner.form)">
+                    <div class="{{dataFactory.getFormInfoFieldClass()}} form-group message formError alert alert-danger" role="alert">
+                                    </div>
+                    <input type="hidden" name="appLoginCsrf" value='86e73624a5e00d7bc5544b593187d442'/>
+                    <div class="form-group">
+                        <label for="username_mobile_email">Email/Phone no.</label>
+                        <input type=" " id="username_mobile_email" class="form-control" name="username_mobile_email" ng-pattern="regexService.emailmobile" ng-model="user.username_mobile_email" required placeholder="yourname@domain.com or 9999999999">
+                        <small class="info text-danger">{{msgService.getFieldMessage(partner.form.username_mobile_email)}}</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" class="form-control" name="password" ng-model="user.password" required autocomplete="off">
+                        <small class="info text-danger">{{msgService.getFieldMessage(partner.form.password)}}</small>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+                </form>
+                <div class="row mg-top20">
+                    <div class="col-xs-6">
+                        <a href="/api/forgot_password" class="btn-link">Forgot password</a>
+                    </div>
+                    <div class="col-xs-6 text-right">
+                        <a href="/api/signup" class="btn-link">Register</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="footer-mirror"></div><footer class="mobile-form-footer text-center"><div class="mobile-header-container"><small class="text-muted">Copyright &copy; 2015 ANI Technologies Pvt. Ltd.All rights reserved.</small></div></footer> -->
+        <script type="text/javascript" src="/static/dev_api/dist/assets/js/mobile-api-common.js"></script>
+        <script type="text/javascript" src="/static/dev_api/dist/assets/js/auth-login.js"></script>
+        <script type="text/javascript" src="/static/dev_api/dist/assets/js/common-angular.js"></script>
+    </body>
+</html>

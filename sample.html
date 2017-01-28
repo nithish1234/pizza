@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Loops</h1>
+
+
+   <label>ur name</label> <input type="name" id="input"><br><br>
+    <label>partners name</label><input type="name" id="inputt"><br><br>
+    <button onclick="me();">submit</button>
+    <p id="demo"></p>
+<script>
+    var a=document.getElementById("input").value;
+    var b=document.getElementById("inputt").value;
+    function me(){
+         var a=document.getElementById("input").value;
+    var b=document.getElementById("inputt").value;
+        var c=a.split("");
+        var d=b.split("");
+        var e=c.concat(d);
+        
+        var f=e.length;
+document.getElementById("demo").innerHTML=f;      
+    }
+</script>
+
+</body>
+</html>

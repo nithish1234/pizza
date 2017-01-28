@@ -1,0 +1,45 @@
+<html>
+<head>
+<script src="C:\Users\nithi\Desktop\my pro\angular2.js"></script>
+
+    <style>
+        input[type=text] {
+        width: 40%;
+        box-sizing:content-box;
+        border: 2px solid #ccc;
+        border-radius: 3px;
+        font-size: 16px;
+        background-color: white;
+
+        background-position: 10px 10px; 
+        background-repeat: no-repeat;
+        padding: 12px 20px 12px 40px;
+             margin-left:20px;
+            }
+     input[type=AGE] {
+    width:5%;
+    box-sizing:content-box;
+    border: 2px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+    background-color: white;
+   maxlength:10;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+         margin-left:20px;
+}</style>
+    </head>
+    <body>
+        
+        <h1 text align="center">REGSTRATION FORM </h1>
+        <BR><BR><BR>
+            <div ng-app=" " >
+  FIRST  NAME: <input type="text" placeholder="enter the name"  ng-model="name"><BR><BR><BR>
+                <p>{{name}}</p>
+  LAST NAME:<input type="text" placeholder="enter the name">  <BR><BR>
+        AGE:<input type="AGE" placeholder="0-20" text align="center">
+</div>
+   
+    </body>
+</html>

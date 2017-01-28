@@ -1,0 +1,47 @@
+{
+  "categories": [
+    {
+      "id": "prime",
+      "display_name": "Prime",
+      "currency": "INR",
+      "distance_unit": "kilometre",
+      "time_unit": "minute",
+      "eta": -1,
+      "distance": -1,
+      "image": "http://d1foexe15giopy.cloudfront.net/prime.png",
+      "fare_breakup": [
+        {
+          "type": "flat_rate",
+          "minimum_distance": "4",
+          "minimum_time": "5",
+          "base_fare": "100",
+          "minimum_fare": "0",
+          "cost_per_distance": "13",
+          "waiting_cost_per_minute": "0",
+          "ride_cost_per_minute": "1",
+          "surcharge": []
+        },
+        {
+          "type": "airport_rate",
+          "minimum_distance": "30",
+          "minimum_time": "5",
+          "base_fare": "499",
+          "minimum_fare": "0",
+          "cost_per_distance": "16",
+          "waiting_cost_per_minute": "0",
+          "ride_cost_per_minute": "1",
+          "surcharge": []
+        }
+      ]
+    }
+  ],
+  "ride_estimate": [
+    {
+      "category": "prime",
+      "distance": 5.84,
+      "travel_time_in_minutes": 19,
+      "amount_min": 146,
+      "amount_max": 167
+    }
+  ]
+}

@@ -1,0 +1,229 @@
+<html>
+
+<head>
+    <script src="login.js">
+    </script>
+    <style>
+        body {
+            background-image: url('')
+           
+        }
+        
+        h2 {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-right: 10px;
+            margin-left: 10px;
+            background-color: black;
+            color:yellow;
+            text-align: center;
+            font-family: bell mt;
+            font-weight: lighter;
+            font-style: obligue;
+            font-size: 35px;
+            padding: 50px;
+        }
+       
+        .dropbtn {
+            background-color: black;
+            color: gray;
+            padding: 16px;
+            font-size: 15px;
+            border: none;
+            cursor: pointer;
+        }
+        
+        img {
+            float: left;
+            margin-bottom: 180px;
+            margin-top: -10px;
+        }
+        
+        .dropdown {
+            margin-left: 50px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: black;
+            min-width: 10px;
+            font-size: 15px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        }
+        
+        .dropdown-content a {
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            display: block;
+        }
+        
+        .dropdown-content a:hover {
+            background-color: grey
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        
+        .dropdown:hover .dropbtn {
+            background-color: black;
+        }
+        
+        .inputFormat {
+            width: 40%;
+            box-sizing: content-box;
+            padding: 12px 20px 12px 40px;
+            margin-left: 10px;
+            color:limegreen;
+        }
+        label
+        {
+            color: black;
+            font-size: 20px;
+           align-content: center;
+            align-items: center;
+            margin-top:70px;
+        }
+        
+        input[type=text] {
+            width: 10%;
+            box-sizing: content-box;
+            border: 2px solid #ccc;
+            border-radius: 3px;
+            font-size: 16px;
+            background-color: white;
+           align-content: center;
+            background-repeat: no-repeat;
+            padding: 12px 20px 12px 40px;
+            margin-left: 20px;
+            
+        
+        }
+        
+        input[type=password] {
+            width: 40%;
+            box-sizing: content-box;
+            border: 2px solid #ccc;
+            border-radius: 3px;
+            font-size: 16px;
+            background-color: white;
+            
+            maxlength: 10;
+            background-position: 10px 10px;
+            background-repeat: no-repeat;
+            padding: 12px 20px 12px 40px;
+            margin-left: 50px;
+            margin-right: auto;
+        }
+        
+        input[type=button] {
+            background-color: black;
+            border: none;
+            color: grey;
+            padding: 16px 32px;
+            text-decoration: none;
+            margin: 4px 2px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        .forAligning
+        {
+         margin-top: 50px; 
+            align-content: space-around;
+        }
+        
+        
+    .forLabel {
+            align-content: center;
+        }
+        select
+        {
+            background-color: black;
+            color: azure;
+            font-size: 20px;
+        }
+    </style>
+    <script>
+        var X_APP_TOKEN = "2dc107e151f04da59947209733f17499";
+        var OLA_RIDE_AVAILABILITY_API_ENDPOINT = "http://sandbox-t.olacabs.com/v1/products";
+
+        function createCORSRequest(method, url) {
+            var xhr = new XMLHttpRequest();
+            if ("withCredentials" in xhr) {
+                // XHR for Chrome/Firefox/Opera/Safari.
+                xhr.open(method, url, true);
+            } else if (typeof XDomainRequest != "undefined") {
+                // XDomainRequest for IE.
+                xhr = new XDomainRequest();
+                xhr.open(method, url);
+            } else {
+                // CORS not supported.
+                xhr = null;
+            }
+            return xhr;
+        }
+
+        function searchOLA() {
+            var pickup_lat = document.getElementById('pickup_lat').value;
+            var pickup_lng = document.getElementById('pickup_lng').value;
+            var endpoint = OLA_RIDE_AVAILABILITY_API_ENDPOINT + "?pickup_lat=" + pickup_lat + "&pickup_lng=" + pickup_lng;
+            var xhttp = new createCORSRequest("GET", endpoint);
+            xhttp.onreadystatechange = function() {
+                if (xhttp.readyState == 4 && xhttp.status == 200) {
+                    document.getElementById("resultDiv").innerHTML = xhttp.responseText;
+                }
+            };
+            xhttp.open("GET", endpoint, true);
+            xhttp.setRequestHeader("X-APP-TOKEN", X_APP_TOKEN);
+            //xhttp.setRequestHeader("Origin", "http://localhost");
+            xhttp.send();
+            var obj
+        }
+    </script>
+    
+</head>
+    
+
+<body>
+    
+   
+
+
+    <h2> <a href="file:///C:/Users/PC/Desktop/my%20pro/task2.html"><img src="images\02.jpg" width="190" height="90" /></a>
+    <B>ola rate meter</B>
+    
+
+        </h2>
+<br>  <br><br><br><br>
+    <p><center>please enter the lattitude and longitude of your current location</center></p>
+<br>
+
+
+
+<center> <form>Latitude &nbsp;&nbsp;<input type="text" id="pickup_lat" value="12.9491416"><br><br><br> Longitude <input type="text" id="pickup_lng" value="77.64298"> </center><br>
+        <br>
+    <div id="resultDiv"></div>
+    <div id="resultDiv2"></div>
+        <br>
+    <center>
+<br> <br>   <label>car type:</label>  <select>
+  <option value="volvo">mini</option>
+  <option value="saab">micro </option>
+  <option value="opel">sedan</option>
+  <option value="audi">suv</option>
+</select>
+    </center>
+    <br><br>
+
+<center>
+        <input  type="button" value=" get fare" onclick="searchOLA();">
+       
+    </center>
+
+</body>
+
+</html> a
